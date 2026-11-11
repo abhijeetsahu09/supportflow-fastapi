@@ -1,0 +1,26 @@
+[project]
+name = "supportflow-fastapi"
+version = "1.0.0"
+description = "A ticket management REST API built with FastAPI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy",
+    "pwdlib[argon2]",
+    "pyjwt",
+    "python-multipart",
+    "email-validator",
+    "psycopg[binary]",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
